@@ -436,8 +436,8 @@ const Portfolio = () => {
             <div className="hero-stats-grid" style={{ display: "flex", gap: "3rem", marginTop: "4rem", paddingTop: "3rem", borderTop: `1px solid ${C.border}`, flexWrap: "wrap", animation: "slideUp 0.8s ease 0.6s both" }}>
               {[{ v:"6",s:"+",l:t.hero.stat1 },{ v:"100",s:"+",l:t.hero.stat2 },{ v:"2",s:"",l:t.hero.stat3 },{ v:"5",s:"+",l:t.hero.stat4 }].map(s => (
                 <div key={s.l}>
-                  <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "2.2rem", color: C.t1 }}>{s.v}<span style={{ color: C.accent }}>{s.s}</span></div>
-                  <div style={{ fontSize: "0.8rem", color: C.t3, textTransform: "uppercase", letterSpacing: "0.08em", marginTop: "0.3rem" }}>{s.l}</div>
+                  <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "3rem", color: C.t1, lineHeight: 1 }}>{s.v}<span style={{ color: C.accent }}>{s.s}</span></div>
+                  <div style={{ fontSize: "0.82rem", color: C.t3, textTransform: "uppercase", letterSpacing: "0.08em", marginTop: "0.6rem" }}>{s.l}</div>
                 </div>
               ))}
             </div>
