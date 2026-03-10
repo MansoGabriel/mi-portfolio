@@ -490,7 +490,7 @@ const Portfolio = () => {
                 <h3 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "1.5rem", marginBottom: "1rem" }}>{t.contact.heading}</h3>
                 <p style={{ color: C.t2, fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "2rem" }}>{t.contact.desc}</p>
                 <ContactLinkItem icon={<EmailIcon width="18" height="18" />} label="mansogabriel97@gmail.com" href="mailto:mansogabriel97@gmail.com" />
-                <ContactLinkItem icon={<LinkedInIcon width="18" height="18" />} label="LinkedIn Profile" href="www.linkedin.com/in/gabrielmanso" />
+                <ContactLinkItem icon={<LinkedInIcon width="18" height="18" />} label="LinkedIn Profile" href="https://www.linkedin.com/in/gabrielmanso" />
                 <ContactLinkItem icon={<GitHubIcon width="18" height="18" />} label="GitHub Profile" href="https://github.com/MansoGabriel" />
               </div>
             </Reveal>
