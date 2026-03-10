@@ -352,14 +352,15 @@ const Portfolio = () => {
   ], [t]);
 
   const handleDownloadCV = useCallback(() => {
+    const file = lang === "es" ? "Gabriel_Manso_CV_ES.pdf" : "Gabriel_Manso_CV_EN.pdf";
     const link = document.createElement("a");
-    link.href = "/Gabriel_CV.pdf";
-    link.download = "Gabriel_CV.pdf";
+    link.href = `/${file}`;
+    link.download = file;
     link.rel = "noopener noreferrer";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  }, []);
+  }, [lang]);
 
   const ctxValue = useMemo(() => ({ lang, t }), [lang, t]);
 
