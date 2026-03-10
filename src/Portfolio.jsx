@@ -160,7 +160,7 @@ const sanitize = (str) => String(str).replace(/[&<>"']/g, (m) => ({'&':'&amp;','
 ═══════════════════════════════════════════════════════════════ */
 const Reveal = ({ children, delay = 0 }) => {
   const [ref, visible] = useReveal();
-  return <div ref={ref} style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(40px)", transition: `all 0.7s cubic-bezier(0.16,1,0.3,1) ${delay}ms` }}>{children}</div>;
+  return <div ref={ref} style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(40px)", transition: `all 0.7s cubic-bezier(0.16,1,0.3,1) ${delay}ms`, height: "100%" }}>{children}</div>;
 };
 
 const NavLink = ({ href, children, onClick }) => {
@@ -187,7 +187,7 @@ const SkillCard = ({ icon, colorKey, title, tags }) => {
   const [h, bind] = useHover();
   const ic = iconColorMap[colorKey];
   return (
-    <div {...bind} role="article" style={{ background: h ? C.cardH : C.card, border: `1px solid ${h ? C.accent+"40" : C.border}`, borderRadius: 16, padding: "2rem", transition: "all 0.4s ease", position: "relative", overflow: "hidden", transform: h ? "translateY(-4px)" : "translateY(0)", boxShadow: h ? "0 20px 40px #00000040" : "none" }}>
+    <div {...bind} role="article" style={{ background: h ? C.cardH : C.card, border: `1px solid ${h ? C.accent+"40" : C.border}`, borderRadius: 16, padding: "2rem", transition: "all 0.4s ease", position: "relative", overflow: "hidden", transform: h ? "translateY(-4px)" : "translateY(0)", boxShadow: h ? "0 20px 40px #00000040" : "none", height: "100%", boxSizing: "border-box" }}>
       <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: `linear-gradient(90deg,${C.accent},${C.accent2})`, transform: h ? "scaleX(1)" : "scaleX(0)", transformOrigin: "left", transition: "transform 0.4s ease" }} />
       <div style={{ width: 44, height: 44, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.3rem", marginBottom: "1.2rem", ...ic }} aria-hidden="true">{icon}</div>
       <h3 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "1.15rem", marginBottom: "0.8rem" }}>{title}</h3>
@@ -234,8 +234,8 @@ const TerminalBlock = () => {
 const ProjectCard = ({ type, title, desc, tech }) => {
   const [h, bind] = useHover();
   return (
-    <article {...bind} style={{ background: C.card, border: `1px solid ${h ? C.accent+"40" : C.border}`, borderRadius: 16, overflow: "hidden", transition: "all 0.4s ease", transform: h ? "translateY(-6px)" : "translateY(0)", boxShadow: h ? "0 25px 50px #00000050" : "none" }}>
-      <div style={{ padding: "2rem 2rem 1rem" }}>
+    <article {...bind} style={{ background: C.card, border: `1px solid ${h ? C.accent+"40" : C.border}`, borderRadius: 16, overflow: "hidden", transition: "all 0.4s ease", transform: h ? "translateY(-6px)" : "translateY(0)", boxShadow: h ? "0 25px 50px #00000050" : "none", height: "100%", display: "flex", flexDirection: "column", boxSizing: "border-box" }}>
+      <div style={{ padding: "2rem 2rem 1rem", flex: 1 }}>
         <div style={{ fontFamily: "'Source Code Pro',monospace", fontSize: "0.7rem", color: C.accent, textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: "0.6rem" }}>{type}</div>
         <h3 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "1.2rem", marginBottom: "0.6rem" }}>{title}</h3>
         <p style={{ fontSize: "0.85rem", color: C.t3, lineHeight: 1.7 }}>{desc}</p>
