@@ -251,7 +251,8 @@ const ProjectCard = ({ type, title, desc, tech }) => {
 const CertCard = ({ emoji, title, org, desc }) => {
   const [h, bind] = useHover();
   return (
-    <div {...bind} style={{ background: C.card, border: `1px solid ${h ? C.accent+"40" : C.border}`, borderRadius: 16, padding: "2rem", display: "flex", gap: "1.2rem", alignItems: "flex-start", transition: "all 0.4s", transform: h ? "translateY(-3px)" : "none" }}>
+    <div {...bind} style={{ background: h ? C.cardH : C.card, border: `1px solid ${h ? C.accent+"40" : C.border}`, borderRadius: 16, padding: "2rem", display: "flex", gap: "1.2rem", alignItems: "flex-start", transition: "all 0.4s ease", transform: h ? "translateY(-4px)" : "translateY(0)", boxShadow: h ? "0 20px 40px #00000040" : "none", position: "relative", overflow: "hidden" }}>
+      <div aria-hidden="true" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: `linear-gradient(90deg,${C.accent},${C.accent2})`, transform: h ? "scaleX(1)" : "scaleX(0)", transformOrigin: "left", transition: "transform 0.4s ease" }} />
       <div aria-hidden="true" style={{ flexShrink: 0, width: 50, height: 50, borderRadius: 12, background: `linear-gradient(135deg,${C.accent}20,${C.accent2}20)`, border: `1px solid ${C.accent}30`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem" }}>{emoji}</div>
       <div>
         <h3 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "1rem", marginBottom: "0.3rem" }}>{title}</h3>
