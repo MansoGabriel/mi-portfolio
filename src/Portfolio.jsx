@@ -234,7 +234,8 @@ const TerminalBlock = () => {
 const ProjectCard = ({ type, title, desc, tech }) => {
   const [h, bind] = useHover();
   return (
-    <article {...bind} style={{ background: C.card, border: `1px solid ${h ? C.accent+"40" : C.border}`, borderRadius: 16, overflow: "hidden", transition: "all 0.4s ease", transform: h ? "translateY(-6px)" : "translateY(0)", boxShadow: h ? "0 25px 50px #00000050" : "none", height: "100%", display: "flex", flexDirection: "column", boxSizing: "border-box" }}>
+    <article {...bind} style={{ background: h ? C.cardH : C.card, border: `1px solid ${h ? C.accent+"40" : C.border}`, borderRadius: 16, overflow: "hidden", transition: "all 0.4s ease", transform: h ? "translateY(-4px)" : "translateY(0)", boxShadow: h ? "0 20px 40px #00000040" : "none", height: "100%", display: "flex", flexDirection: "column", boxSizing: "border-box", position: "relative" }}>
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: `linear-gradient(90deg,${C.accent},${C.accent2})`, transform: h ? "scaleX(1)" : "scaleX(0)", transformOrigin: "left", transition: "transform 0.4s ease" }} />
       <div style={{ padding: "2rem 2rem 1rem", flex: 1 }}>
         <div style={{ fontFamily: "'Source Code Pro',monospace", fontSize: "0.7rem", color: C.accent, textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: "0.6rem" }}>{type}</div>
         <h3 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "1.2rem", marginBottom: "0.6rem" }}>{title}</h3>
