@@ -285,7 +285,7 @@ const ContactForm = () => {
     const { name, email, subject, message } = form;
     if (!name || !email || !message) return;
     const body = encodeURIComponent(`Name: ${sanitize(name)}\nEmail: ${sanitize(email)}\n\n${sanitize(message)}`);
-    window.open(`mailto:your@email.com?subject=${encodeURIComponent(sanitize(subject || "Portfolio Contact"))}&body=${body}`, "_self");
+    window.open(`mailto:mansogabriel97@gmail.com?subject=${encodeURIComponent(sanitize(subject || "Portfolio Contact"))}&body=${body}`, "_self");
   }, [form]);
 
   const inputStyle = (n) => ({
@@ -489,9 +489,9 @@ const Portfolio = () => {
               <div>
                 <h3 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "1.5rem", marginBottom: "1rem" }}>{t.contact.heading}</h3>
                 <p style={{ color: C.t2, fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "2rem" }}>{t.contact.desc}</p>
-                <ContactLinkItem icon={<EmailIcon width="18" height="18" />} label="your@email.com" href="mailto:your@email.com" />
-                <ContactLinkItem icon={<LinkedInIcon width="18" height="18" />} label="LinkedIn Profile" href="https://linkedin.com" />
-                <ContactLinkItem icon={<GitHubIcon width="18" height="18" />} label="GitHub Profile" href="https://github.com" />
+                <ContactLinkItem icon={<EmailIcon width="18" height="18" />} label="mansogabriel97@gmail.com" href="mailto:mansogabriel97@gmail.com" />
+                <ContactLinkItem icon={<LinkedInIcon width="18" height="18" />} label="LinkedIn Profile" href="www.linkedin.com/in/gabrielmanso" />
+                <ContactLinkItem icon={<GitHubIcon width="18" height="18" />} label="GitHub Profile" href="https://github.com/MansoGabriel" />
               </div>
             </Reveal>
             <Reveal delay={150}><ContactForm /></Reveal>
