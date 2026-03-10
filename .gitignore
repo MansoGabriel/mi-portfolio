@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Claude Code (local AI assistant config — not needed in repo)
+CLAUDE.md
+.claudeignore
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
