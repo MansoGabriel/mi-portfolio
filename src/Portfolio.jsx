@@ -447,7 +447,7 @@ const Navbar = ({ scrolled, lang, setLang, navItems, menuOpen, setMenuOpen, stat
       transition: "all 0.3s ease",
     }}
   >
-    <a href="#" aria-label="Home" style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1.3rem", letterSpacing: "-0.02em", color: C.t1, textDecoration: "none" }}>
+    <a href="#" aria-label="Home" style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "1.3rem", letterSpacing: "-0.02em", color: C.t1, textDecoration: "none" }}>
       &lt;G<span style={{ color: C.accent }}>.</span>dev /&gt;
     </a>
 
@@ -554,7 +554,7 @@ const Portfolio = () => {
               {t.hero.tag}
             </div>
 
-            <h1 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "clamp(2.4rem,5.5vw,4.8rem)", lineHeight: 1.05, letterSpacing: "-0.03em", marginBottom: "1.5rem", animation: "slideUp 0.8s ease 0.15s both" }}>
+            <h1 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "clamp(2.4rem,5.5vw,4.8rem)", lineHeight: 1.05, letterSpacing: "-0.03em", marginBottom: "1.5rem", animation: "slideUp 0.8s ease 0.15s both" }}>
               {t.hero.h1_1}<span style={{ color: C.accent }}>{t.hero.h1_accent}</span><br />
               {t.hero.h1_2}<br />
               <span style={{ color: C.accent2 }}>{t.hero.h1_accent2}</span>
@@ -582,7 +582,7 @@ const Portfolio = () => {
             <div className="hero-stats-grid" style={{ display: "flex", gap: "3rem", marginTop: "4rem", paddingTop: "3rem", borderTop: `1px solid ${C.border}`, flexWrap: "wrap", animation: "slideUp 0.8s ease 0.6s both" }}>
               {heroStats.map(stat => (
                 <div key={stat.key}>
-                  <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "3rem", color: C.t1, lineHeight: 1 }}>
+                  <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: "3rem", color: C.t1, lineHeight: 1 }}>
                     {stat.v}<span style={{ color: C.accent }}>{stat.s}</span>
                   </div>
                   <div style={{ fontSize: "0.82rem", color: C.t3, textTransform: "uppercase", letterSpacing: "0.08em", marginTop: "0.6rem" }}>
