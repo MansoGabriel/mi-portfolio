@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useMemo, useContext, createContext } from "react";
 import translations from "./translations";
+import { getTheme } from "./constants";
 
 /* ─────────────────────────────────────────────────────────────
    i18n CONTEXT
@@ -7,6 +8,13 @@ import translations from "./translations";
 ───────────────────────────────────────────────────────────── */
 export const I18nContext = createContext();
 export const useI18n = () => useContext(I18nContext);
+
+/* ─────────────────────────────────────────────────────────────
+   THEME CONTEXT
+   Provides the active color palette to any component via useTheme().
+───────────────────────────────────────────────────────────── */
+export const ThemeContext = createContext();
+export const useTheme = () => useContext(ThemeContext);
 
 /* ─────────────────────────────────────────────────────────────
    useReveal
@@ -81,8 +89,10 @@ export const usePortfolioState = () => {
   const [lang, setLang] = useState("en");
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mode, setMode] = useState("light");
 
   const t = translations[lang];
+  const theme = getTheme(mode);
 
   // Show a border on the navbar once the user scrolls past 80px
   useEffect(() => {
@@ -104,5 +114,5 @@ export const usePortfolioState = () => {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  return { lang, setLang, scrolled, menuOpen, setMenuOpen, t };
+  return { lang, setLang, scrolled, menuOpen, setMenuOpen, t, mode, setMode, theme };
 };

@@ -1,33 +1,27 @@
 /* ─────────────────────────────────────────────────────────────
    THEME COLORS
-   Single source of truth for all colors used across the app.
+   Light and dark palettes. Use getTheme(mode) to select.
 ───────────────────────────────────────────────────────────── */
-export const C = {
-  // Backgrounds
-  bg1: "#0a0a0f",
-  bg2: "#111118",
-  card: "#16161f",
-  cardH: "#1c1c28", // card hover state
-
-  // Accent palette
-  accent: "#4f6df5",
-  accentG: "#4f6df540", // accent with 25% opacity (for glows)
-  accent2: "#7c5bf5",
-
-  // Text hierarchy
-  t1: "#e8e8f0",  // primary
-  t2: "#8888a0",  // secondary
-  t3: "#55556a",  // tertiary / muted
-
-  // Borders
-  border: "#22223a",
-
-  // Status / semantic colors
-  green: "#34d399",
-  orange: "#f59e0b",
-  cyan: "#22d3ee",
-  red: "#ef4444",
+export const lightTheme = {
+  bg1: "#F5F2EC", bg2: "#EDE9E0", card: "#FFFFFF", cardH: "#FAFAF7",
+  accent: "#5C7A4A", accentG: "#5C7A4A40", accent2: "#8B7D3C",
+  t1: "#1F2E1F", t2: "#5A6B58", t3: "#7A8A72",
+  border: "#D5CFC4",
+  green: "#5C7A4A", orange: "#8B7D3C", cyan: "#4A7A6A", red: "#A0522D",
 };
+
+export const darkTheme = {
+  bg1: "#121a12", bg2: "#1a241a", card: "#1e2a1e", cardH: "#243024",
+  accent: "#7fa568", accentG: "#7fa56840", accent2: "#c4b060",
+  t1: "#e8ece4", t2: "#b0bca8", t3: "#8a9a80",
+  border: "#2e3e2e",
+  green: "#7fa568", orange: "#c4b060", cyan: "#6aaa90", red: "#d08060",
+};
+
+export const getTheme = (mode) => mode === "dark" ? darkTheme : lightTheme;
+
+/* Backward-compat alias (used during migration) */
+export const C = lightTheme;
 
 /* ─────────────────────────────────────────────────────────────
    SKILLS DATA
@@ -43,18 +37,15 @@ export const skillTags = [
   ["JavaScript ES6+","TypeScript","React","Node.js","Express","MongoDB","HTML / CSS","Git / GitLab","VS Code","Postman","VBA"],
 ];
 
-export const skillIcons = ["⚡", "🔗", "🏗️", "🏭", "🌎", "🛠️"];
-export const skillColors = ["blue", "purple", "green", "orange", "cyan", "red"];
-
-// Maps a color key to the background/foreground used in skill card icons
-export const iconColorMap = {
-  blue:   { background: "#4f6df518", color: "#4f6df5" },
-  purple: { background: "#7c5bf518", color: "#7c5bf5" },
-  green:  { background: "#34d39918", color: "#34d399" },
-  orange: { background: "#f59e0b18", color: "#f59e0b" },
-  cyan:   { background: "#22d3ee18", color: "#22d3ee" },
-  red:    { background: "#ef444418", color: "#ef4444" },
-};
+/* Accent color per skill card (used for decorative initial) */
+export const skillAccents = [
+  "#5C7A4A",  // olive
+  "#8B7D3C",  // mustard
+  "#4A7A6A",  // teal sage
+  "#A07850",  // warm amber
+  "#6B8F71",  // sage green
+  "#A0522D",  // terracotta
+];
 
 /* ─────────────────────────────────────────────────────────────
    PROJECTS DATA

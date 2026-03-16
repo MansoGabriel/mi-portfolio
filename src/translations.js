@@ -71,7 +71,7 @@ const translations = {
         date: "January 2023 — August 2025",
         title: "NetSuite Consultant & Developer",
         company: "BeApps Adistec",
-        desc: "Participated in implementation and continuous improvement projects for regional clients. Diagnosed and resolved complex incidents in NetSuite production environments. Designed customizations using SuiteScript 1.0, 2.0, and 2.1. Provided technical and functional support, and created documentation for implemented solutions.",
+        desc: "Led the design and development of REST API integrations connecting NetSuite with third-party platforms, including e-commerce systems, payment gateways, and LATAM fiscal providers via OAuth 1.0/TBA. Built scalable Map/Reduce and RESTlet-based architectures for high-volume data exchange. Spearheaded SuiteQL adoption for advanced reporting and collaborated on Oracle Integration Cloud (OIC) connector projects.",
       },
       e3: {
         date: "December 2019 — December 2022",
@@ -161,7 +161,7 @@ const translations = {
         date: "Enero 2023 — Agosto 2025",
         title: "Consultor & Desarrollador NetSuite",
         company: "BeApps Adistec",
-        desc: "Participación en proyectos de implementación y mejora continua para clientes regionales. Diagnóstico y resolución de incidencias complejas en entornos productivos de NetSuite. Diseño de personalizaciones con SuiteScript 1.0, 2.0 y 2.1. Asistencia técnica y funcional, y documentación de soluciones implementadas.",
+        desc: "Lideré el diseño y desarrollo de integraciones REST API conectando NetSuite con plataformas externas, incluyendo sistemas de e-commerce, pasarelas de pago y proveedores fiscales de LATAM mediante OAuth 1.0/TBA. Construcción de arquitecturas escalables basadas en Map/Reduce y RESTlets para intercambio de datos de alto volumen. Impulso en la adopción de SuiteQL para reportes avanzados y colaboración en proyectos de conectores con Oracle Integration Cloud (OIC).",
       },
       e3: {
         date: "Diciembre 2019 — Diciembre 2022",
